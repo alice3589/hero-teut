@@ -47,3 +47,38 @@ body{
 @media (max-width: 520px){
   .cover{ letter-spacing: 0.18em; left: -6vw; }
 }
+
+
+/* ===== Bottom decorative word "OTONO" ===== */
+.footword{
+  position: fixed;
+  left: 0; right: 0;
+  bottom: 0;
+  height: clamp(120px, 22vw, 300px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.otono{
+  position: absolute;
+  left: 75%;
+  bottom: -0.40em;          /* 下で少しクリップ */
+  transform: translateX(-50%);
+  margin: 0; padding: 0;
+  font-family: "Playfair Display","Cormorant Garamond", ui-serif, Georgia, serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: clamp(72px, 20vw, 420px);
+  letter-spacing: 0.28em;
+  line-height: 0.82;
+  color: var(--brand-blue);
+  opacity: .92;
+  user-select: none;
+  pointer-events: none;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+}
+
+@media (max-width: 520px){
+  .otono{ letter-spacing: 0.18em; }
+}
