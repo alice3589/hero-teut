@@ -4,6 +4,13 @@
   --brand-blue: #3f67db;   /* main blue for the big letters */
 }
 
+:root{
+  --word-scale: 0.90;        /* 全体の倍率（0.80〜1.00あたりで調整） */
+  /* 個別に分けたいなら */
+  --cover-scale: 0.70;
+  --otono-scale: 0.70;
+}
+
 /* Reset-ish */
 *{ box-sizing: border-box; }
 html,body{ height: 100%; }
@@ -32,7 +39,6 @@ body{
   font-family: "Playfair Display","Cormorant Garamond", ui-serif, Georgia, serif;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: clamp(72px, 18vw, 340px);  /* scale with viewport */
   letter-spacing: 0.28em;               /* wide tracking like the reference */
   line-height: 0.82;
   color: var(--brand-blue);
@@ -41,6 +47,14 @@ body{
   pointer-events: none;  /* purely decorative; let links above it be clickable */
   font-kerning: normal;
   font-variant-ligatures: common-ligatures;
+}
+
+.cover{
+  font-size: clamp(
+    calc(56px * var(--cover-scale, var(--word-scale))),
+    calc(18vw * var(--cover-scale, var(--word-scale))),
+    calc(340px * var(--cover-scale, var(--word-scale)))
+  );
 }
 
 /* Small screens: slightly reduce letter spacing so it doesn't overflow too much */
@@ -68,7 +82,6 @@ body{
   font-family: "Playfair Display","Cormorant Garamond", ui-serif, Georgia, serif;
   font-weight: 500;
   text-transform: uppercase;
-  font-size: clamp(72px, 20vw, 420px);
   letter-spacing: 0.28em;
   line-height: 0.82;
   color: var(--brand-blue);
@@ -77,6 +90,14 @@ body{
   pointer-events: none;
   font-kerning: normal;
   font-variant-ligatures: common-ligatures;
+}
+
+.otono{
+  font-size: clamp(
+    calc(56px * var(--otono-scale, var(--word-scale))),
+    calc(20vw * var(--otono-scale, var(--word-scale))),
+    calc(420px * var(--otono-scale, var(--word-scale)))
+  );
 }
 
 @media (max-width: 520px){
