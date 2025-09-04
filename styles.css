@@ -168,3 +168,58 @@ body{
   min-height: 0;
   padding: 0;
 }
+
+/* スライドを重ねてフェード切り替え */
+.slides{
+  position: absolute;
+  inset: 0;
+}
+.slide{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+.slide.is-active{ opacity: 1; }
+
+/* ページ四角 （画像の左下、外側に表示） */
+.pager{
+  position: absolute;
+  left: 3%;
+  bottom: -28px;
+  z-index: 2;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 四角ボタン：未選択は薄目、選択は濃い青 */
+.dot{
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: rgba(63, 103, 219, .28);
+  border: 1px solid rgba(63, 103, 219, .45);
+  box-shadow: 0 1px 0 rgba(6, 38, 120, .15);
+  cursor: pointer;
+  padding: 0;
+  display: black;
+  text-indent: -9999px;
+}
+.dot:hover{ background: rgba(63, 103, 219, 38); }
+.dot[aria-selected="true"]{
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+}
+
+/* 小さな画面では少し近づける */
+@media (max-width: 600px){
+  .pager{ left: 4%; bottom: -22px; gap: 10px; }
+  .dot{ width: 12px; height: 12px; border-radius: 2px; }
+}

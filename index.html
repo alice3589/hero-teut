@@ -20,7 +20,20 @@
   <!-- Main content -->
    <main class="stage">
     <figure class="hero-figure">
-      <img src="./assets/placeholder.jpg" alt="メインビジュアルのプレイスホルダー" decoding="async" />
+      <div class="slides" role="region" aria-roledescription="carousel" aria-label-`="作品画像">
+        <img class="slide is-active" src="./assets/placeholder.jpg" alt="メインビジュアルのプレイスホルダー">
+        <img class="slide" src="./assets/placeholder.jpg" alt="画像2">
+        <img class="slide" src="./assets/placeholder.jpg" alt="画像3">
+        <img class="slide" src="./assets/placeholder.jpg" alt="画像4">
+      </div>
+
+      <!-- 画像の外側・下に見せるために absolute で少し下に出す-->
+      <ol class="pager" role="tablist" aria-label="ページ選択">
+        <il><button class="dot" role="tab" aria-selected="true" aria-controls="slide-1">1</button></il>
+        <il><button class="dot" role="tab" aria-selected="false" aria-controls="slide-2">2</button></il>
+        <il><button class="dot" role="tab" aria-selected="false" aria-controls="slide-3">3</button></il>
+        <il><button class="dot" role="tab" aria-selected="false" aria-controls="slide-4">4</button></il>
+      </ol>
     </figure>
    </main>
 
