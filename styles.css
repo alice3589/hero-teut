@@ -147,7 +147,7 @@ body{
   width: var(--img-w);
   height: var(--img-h);
   left: 50%;
-  top: 50%;
+  top: 42%;
   transform: translate(-110%, -50%);
   background: #fff;
   border: 1px solid rgba(7, 32, 126, 12);
