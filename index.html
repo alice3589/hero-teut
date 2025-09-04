@@ -18,28 +18,28 @@
   </header>
 
   <!-- Main content -->
-   <main class="stage">
+  <main class="stage">
     <figure class="hero-figure">
-      <div class="slides" role="region" aria-roledescription="carousel" aria-label-`="作品画像">
-        <img class="slide is-active" src="./assets/placeholder.jpg" alt="メインビジュアルのプレイスホルダー">
-        <img class="slide" src="./assets/placeholder.jpg" alt="画像2">
-        <img class="slide" src="./assets/placeholder.jpg" alt="画像3">
-        <img class="slide" src="./assets/placeholder.jpg" alt="画像4">
+      <div class="slides" role="region" aria-roledescription="carousel" aria-label="作品画像">
+        <img id="slide-1" class="slide is-active" src="./assets/slide1.jpg" alt="スライド1">
+        <img id="slide-2" class="slide"        src="./assets/slide2.jpg" alt="スライド2">
+        <img id="slide-3" class="slide"        src="./assets/slide3.jpg" alt="スライド3">
+        <img id="slide-4" class="slide"        src="./assets/slide4.jpg" alt="スライド4">
       </div>
-
-      <!-- 画像の外側・下に見せるために absolute で少し下に出す-->
+  
+      <!-- 画像の外側・下に見える四角 -->
       <ol class="pager" role="tablist" aria-label="ページ選択">
-        <il><button class="dot" role="tab" aria-selected="true" aria-controls="slide-1">1</button></il>
-        <il><button class="dot" role="tab" aria-selected="false" aria-controls="slide-2">2</button></il>
-        <il><button class="dot" role="tab" aria-selected="false" aria-controls="slide-3">3</button></il>
-        <il><button class="dot" role="tab" aria-selected="false" aria-controls="slide-4">4</button></il>
+        <li><button class="dot" role="tab" aria-selected="true"  aria-controls="slide-1">1</button></li>
+        <li><button class="dot" role="tab" aria-selected="false" aria-controls="slide-2">2</button></li>
+        <li><button class="dot" role="tab" aria-selected="false" aria-controls="slide-3">3</button></li>
+        <li><button class="dot" role="tab" aria-selected="false" aria-controls="slide-4">4</button></li>
       </ol>
     </figure>
-   </main>
-
+  </main>
+  
   <footer class="footword" role="contentinfo" aria-label="Decorative large word OTONO">
     <h2 class="otono" aria-hidden="true">OTONO</h2>
-        </h2>
+  </footer>
       </figcaption>
 
   <script src="./script.js"></script>
